@@ -1,7 +1,15 @@
 controllers:
-    resource: ../src/Controller/
-    type: annotation
+    resource:
+        path: ../src/Infrastructure/Controller/
+        namespace: App\Infrastructure\Controller
+    type: attribute
 
-kernel:
-    resource: ../src/Kernel.php
-    type: annotation
+search_foods:
+    path: /foods
+    controller: App\Infrastructure\Controller\SearchController
+    methods: GET
+
+create_foods:
+    path: /foods
+    controller: App\Infrastructure\Controller\CreateController
+    methods: POST
